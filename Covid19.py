@@ -79,7 +79,7 @@ corpus = tfidf_vectorizer.fit_transform(xtrain)
 #----------------Streamlit Implementation-----------------------
 
 st.markdown("<h1 style = 'color: #0C2D57; text-align: center; font-family: geneva'>COVID 19 HEALTHCARE CHATBOT</h1>", unsafe_allow_html = True)
-st.markdown("<h4 style = 'margin: -30px; color: #F11A7B; text-align: center; font-family: cursive '>Built By Jimoh</h4>", unsafe_allow_html = True)
+st.markdown("<h4 style = 'margin: -30px; color: #F11A7B; text-align: center; font-family: cursive '>Built By Jimoh Abdulquyum </h4>", unsafe_allow_html = True)
 
 st.markdown("<br>", unsafe_allow_html= True)
 st.markdown("<br>", unsafe_allow_html= True)
@@ -190,4 +190,5 @@ st.dataframe(history, use_container_width = True)
 if st.button('Clear Chat History'):
 
     clearHistory()
+
 
