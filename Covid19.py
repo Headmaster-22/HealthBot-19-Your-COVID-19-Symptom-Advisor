@@ -1,4 +1,9 @@
 import nltk
+
+# Download the required NLTK data files automatically if missing
+nltk.download('punkt')
+nltk.download('punkt_tab')
+
 import random
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity      
@@ -176,4 +181,5 @@ st.dataframe(history, use_container_width = True)
 
 #Button For Chat History Clearing
 if st.button('Clear Chat History'):
+
     clearHistory()
