@@ -1,8 +1,15 @@
 import nltk
+import os
 
-# Download the required NLTK data files automatically if missing
-nltk.download('punkt')
-nltk.download('punkt_tab')
+# Make sure nltk_data directory exists
+nltk_data_path = os.path.join(os.getcwd(), 'nltk_data')
+nltk.data.path.append(nltk_data_path)
+
+# Download required resources (quietly)
+nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
+nltk.download('wordnet', quiet=True)
+nltk.download('omw-1.4', quiet=True)
 
 import random
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -183,3 +190,4 @@ st.dataframe(history, use_container_width = True)
 if st.button('Clear Chat History'):
 
     clearHistory()
+
